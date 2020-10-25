@@ -1,0 +1,30 @@
+
+MyTwitter - Objetivos:
+
+[X] - Cadastrar usuários (Criar perfis)
+[X] - Cancelar usuários (Cancelar perfis)
+[X] - Tweetar
+[X] - Visualizar os próprios tweets
+[X] - Visualizar a sua timeline
+[X] - Seguir outros usuários
+[X] - Saber o número de seguidores
+[X] - Listar seus seguidores
+
+Telas:
+-=-=Ações administrativas-=-=
+[X] - Tela principal para o controle de ações (Menu)
+[X] - Tela de cadastro de perfil
+[X] - Tela de cancelamento de perfil
+[X] - Tela de seleção de perfil
+
+-=-=Ações da rede social0-=-=
+[] - Tela de acesso ao "meu perfil"
+   [X] - mostrar timeline
+   [X] - mostrar seus tweets próprios
+   [X] - mostrar número de seguidores
+   [X] - mostrar os perfis seguidores
+   [X] - editar(?)
+[X] - Tela de acesso aos perfis de outros usuários
+   [X] - Seguir
+   [X] - mostrar timeline
+   [X] - mostrar número de seguidores
