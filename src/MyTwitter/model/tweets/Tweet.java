@@ -1,37 +1,27 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package MyTwitter.model.tweets;
 
 /**
- *
  * @author felip
  */
 public class Tweet {
+    
+    private String usuario,     //Guarda o usuário que emitiu o tweet
+		   mensagem;    //Guarda a mensagem emitida
 	
-	//Atributes
-	private String usuario,
-		       mensagem;
+    //Getters e Setters
+    public String getUsuario() {
+    	return usuario;
+    }
 	
+    public String getMensagem() {
+    	return mensagem;
+    }
 	
-	//Getters
-	public String getUsuario() {
-		return usuario;
-	}
-	
-	public String getMensagem() {
-		return mensagem;
-	}
-	
-	//Setters
-	public void setUsuario(String usuario) {
-		this.usuario = usuario;
-	}
+    public void setUsuario(String usuario) {
+    	this.usuario = usuario;
+    }
 
-	public void setMensagem(String mensagem) {
-		this.mensagem = mensagem;
-	}
-	
+    public void setMensagem(String mensagem) {
+	this.mensagem = mensagem;
+    }	
 }

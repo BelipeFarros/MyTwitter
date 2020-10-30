@@ -169,7 +169,7 @@ public class SearchedPerfilFrame extends javax.swing.JFrame implements IPerfilFr
         }
         
         if(MainFrame.twitterController.getPerfilUsuario() == null){
-            JOptionPane.showMessageDialog(null, "Selecione um perfil ususario antes de seguir");
+            JOptionPane.showMessageDialog(null, "Selecione um perfil usuario antes de seguir");
             return;
         }
         

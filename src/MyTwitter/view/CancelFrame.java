@@ -3,8 +3,6 @@ package MyTwitter.view;
 import MyTwitter.model.exceptions.PDException;
 import MyTwitter.model.exceptions.PIException;
 import java.util.Vector;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.JOptionPane;
 

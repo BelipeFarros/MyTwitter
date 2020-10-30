@@ -36,9 +36,11 @@ public class VectorUsuarios implements IRepositorioUsuario {
 
     @Override
     public void atualizar(Perfil usuario) throws UNCException {
-	if(buscar(usuario.getUsuario()) != null){
-            MainFrame.twitterController.getPerfilUsuario().setUsuario(usuario.getUsuario());
-        } else throw new UNCException(usuario);
+        String novoUsername = usuario.getUsuario();
+        if(buscar(novoUsername) == null){
+            MainFrame.twitterController.getPerfilUsuario().setUsuario(novoUsername);
+            throw new UNCException(usuario);
+        }
     }
     
     public Vector<Perfil> getUsuarios(){

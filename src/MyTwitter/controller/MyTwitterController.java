@@ -5,6 +5,7 @@ import MyTwitter.model.exceptions.PDException;
 import MyTwitter.model.exceptions.PEException;
 import MyTwitter.model.exceptions.PIException;
 import MyTwitter.model.exceptions.SIException;
+import MyTwitter.model.exceptions.UJCException;
 import MyTwitter.model.exceptions.UNCException;
 import MyTwitter.model.system.MyTwitter;
 import MyTwitter.model.system.VectorUsuarios;
@@ -180,14 +181,16 @@ public class MyTwitterController {
         return perfisSeguidos;
     }
     
-    public void atualizar(String username) throws UNCException {
-        Perfil perfil = perfilUsuario;
-        perfil.setUsuario(username);
+    public void atualizar(String username) throws UNCException, UJCException {
+        Perfil perfil = new PessoaFisica(username, 0);
+        
         try {
-            twitter.atualizar(perfil);
-        } catch (UNCException ex) {
+            repositorio.atualizar(perfil);
+        } catch (UNCException ex){
             throw ex;
         }
+        
+        throw new UJCException(perfil);
     }
     
     //----Getters-n'-Setters----
@@ -221,5 +224,4 @@ public class MyTwitterController {
     public Perfil getUsuario(String usuario){
         return repositorio.buscar(usuario);
     }
-    
 }

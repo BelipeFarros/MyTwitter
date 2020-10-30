@@ -1,26 +1,19 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package MyTwitter.model.users;
 
 /**
- *
  * @author felip
  */
 public class PessoaFisica extends Perfil {
 	
-    //Atributes ---
-    private long cpf;
+    private long cpf; //Guarda o valor do cpf da PessoaFísica
 	
-    //Constructor ---
+    //Construtor
     public PessoaFisica(String usuario, long cpf) {
 	super(usuario);
 	this.cpf = cpf;
     }
 
-    //Getter and Setter ---
+    //Getter e Setter
     public long getCpf() {
 	return cpf;
     }

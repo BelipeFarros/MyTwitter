@@ -1,6 +1,5 @@
 package MyTwitter.model.interfaces;
 
-import MyTwitter.model.tweets.Tweet;
 import java.util.Vector;
 
 /**

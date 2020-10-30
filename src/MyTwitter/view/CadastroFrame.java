@@ -1,11 +1,8 @@
 package MyTwitter.view;
 
-import MyTwitter.controller.MyTwitterController;
 import MyTwitter.model.exceptions.PEException;
 import java.awt.HeadlessException;
-import java.util.logging.Level;
-import java.util.logging.Logger;
-import javax.swing.JFrame;
+
 import javax.swing.JOptionPane;
 
 /**

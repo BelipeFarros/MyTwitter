@@ -197,7 +197,7 @@ public class MainFrame extends javax.swing.JFrame {
         panel_sidebarLayout.setVerticalGroup(
             panel_sidebarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panel_sidebarLayout.createSequentialGroup()
-                .addGap(118, 118, 118)
+                .addGap(129, 129, 129)
                 .addComponent(ItemAddSidebar_jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ItemCancelSidebar_jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -205,7 +205,7 @@ public class MainFrame extends javax.swing.JFrame {
                 .addComponent(selectPerfilSidebar_jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(ItemPerfilSidebar_jPanel, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(216, Short.MAX_VALUE))
+                .addContainerGap(205, Short.MAX_VALUE))
         );
 
         searchBar_Jtextfield.setBackground(new java.awt.Color(46, 47, 71));
@@ -302,7 +302,8 @@ public class MainFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_ItemCancelSidebar_jPanelMouseClicked
 
     private void ItemPerfilSidebar_jPanelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ItemPerfilSidebar_jPanelMouseClicked
-        if(MainFrame.twitterController.getPerfilUsuario() == null){
+        Perfil perfil = MainFrame.twitterController.getPerfilUsuario();
+        if(perfil == null || !perfil.isAtivo()){
             JOptionPane.showMessageDialog(null, "Selecione um perfil usuario!");
             return;
         }
@@ -343,7 +344,7 @@ public class MainFrame extends javax.swing.JFrame {
             }
         });
     }//GEN-LAST:event_selectPerfilSidebar_jPanelMouseClicked
-
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">

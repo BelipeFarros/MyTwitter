@@ -6,22 +6,18 @@ import MyTwitter.model.exceptions.PEException;
 import MyTwitter.model.exceptions.PIException;
 import MyTwitter.model.exceptions.SIException;
 import MyTwitter.model.exceptions.UJCException;
-import MyTwitter.model.exceptions.UNCException;
 import MyTwitter.model.interfaces.IRepositorioUsuario;
 import MyTwitter.model.interfaces.ITwitter;
 import MyTwitter.model.tweets.Tweet;
 import MyTwitter.model.users.Perfil;
 import java.util.Vector;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
- *
  * @author felip
  */
 public class MyTwitter implements ITwitter {
 	
-    private IRepositorioUsuario repositorio;
+    private IRepositorioUsuario repositorio; //Guarda o modelo de manutenção dos dados
     
     public MyTwitter(IRepositorioUsuario repositorio) {
 	this.repositorio = repositorio;
@@ -146,13 +142,5 @@ public class MyTwitter implements ITwitter {
                 return perfisValidos;
             } else throw new PDException(usuario);
     	} else throw new PIException(usuario);
-    }
-    
-    public void atualizar(Perfil usuario) throws UNCException{
-        try {
-            repositorio.atualizar(usuario);
-        } catch (UNCException ex) {
-            throw ex;
-        } 
     }
 }

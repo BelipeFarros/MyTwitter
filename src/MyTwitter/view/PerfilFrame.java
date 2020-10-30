@@ -106,7 +106,14 @@ public class PerfilFrame extends javax.swing.JFrame implements IPerfilFrame{
         txtTweet_jTextArea.setForeground(new java.awt.Color(255, 255, 255));
         txtTweet_jTextArea.setLineWrap(true);
         txtTweet_jTextArea.setRows(5);
+        txtTweet_jTextArea.setText("O que você está pensando hoje?");
+        txtTweet_jTextArea.setWrapStyleWord(true);
         txtTweet_jTextArea.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(46, 47, 71)));
+        txtTweet_jTextArea.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                txtTweet_jTextAreaMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(txtTweet_jTextArea);
 
         post_jButton.setBackground(new java.awt.Color(42, 42, 57));
@@ -308,6 +315,10 @@ public class PerfilFrame extends javax.swing.JFrame implements IPerfilFrame{
         });
         dispose();
     }//GEN-LAST:event_config_jLabelMouseClicked
+
+    private void txtTweet_jTextAreaMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_txtTweet_jTextAreaMouseClicked
+        txtTweet_jTextArea.setText("");
+    }//GEN-LAST:event_txtTweet_jTextAreaMouseClicked
     
     @Override
     public void loadPerfil(){

@@ -1,8 +1,7 @@
 package MyTwitter.view;
 
+import MyTwitter.model.exceptions.UJCException;
 import MyTwitter.model.exceptions.UNCException;
-import MyTwitter.model.users.Perfil;
-import MyTwitter.model.users.PessoaFisica;
 import javax.swing.JOptionPane;
 
 /**
@@ -142,7 +141,9 @@ public class AtualizarFrame extends javax.swing.JFrame {
         try {
             MainFrame.twitterController.atualizar(username);
         } catch(UNCException ex) {
-            JOptionPane.showMessageDialog(null, "Usuaário não cadastrado");
+            JOptionPane.showMessageDialog(null, "Usuário atualizado com sucesso");
+        } catch (UJCException ex) {
+            JOptionPane.showMessageDialog(null, "Nome de usuário já cadastrado");
         }
         dispose();
     }//GEN-LAST:event_atualizar_jButtonActionPerformed
