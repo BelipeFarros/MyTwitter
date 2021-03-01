@@ -8,7 +8,7 @@ import MyTwitter.model.tweets.Tweet;
  */
 public abstract class Perfil {
 	
-    private String usuario;             //Gaurda o nome de usuários
+    private String usuario;             //Guarda o nome de usuários
     private Vector<Perfil> seguidos;    //Guarda os perfis seguidos pelo perfil
     private Vector<Perfil> seguidores;  //Guarda os perfis seguidoes do perfil
     private Vector<Tweet>  timeline;    //Guarda todos os tweets associados ao perfil
